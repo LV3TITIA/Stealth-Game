@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _cameraTransform = Camera.main.transform;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -64,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _direction.y = _rigidbody.velocity.y; //On applique la gravité
-        }
+        } // C'est le moment de vérifier si n'y a pas une pente trop pentue ou un escalier avec des marches trop petites
         _rigidbody.velocity = _direction; //La velocité est mise à jour par rapports aux inputs du joueur et par rapport a STG
     }
 
