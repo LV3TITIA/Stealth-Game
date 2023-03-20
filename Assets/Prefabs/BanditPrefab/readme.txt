@@ -1,0 +1,1 @@
+Contient un élément pour la correction du module stealth : le prefab du bandit
